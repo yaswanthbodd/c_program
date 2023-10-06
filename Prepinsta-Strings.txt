@@ -1,0 +1,76 @@
+//Prepinsta-Strings
+
+#include <stdio.h>
+
+int main() {
+   
+   char c;
+   scanf("%c",&c);
+   if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+       printf("Vowel");
+   }else
+        printf("Consonant");
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+   //Alphabet or not
+   char ch;
+   scanf("%c",&ch);
+   if((ch>=65 && ch<=90)||(ch>=97 && ch<=122))
+        printf("Alphabet");
+    else
+        printf("Given is not a alphabet");
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+   //TO find the ASCII Value of the given string
+   char ch;
+   scanf("%c",&ch);
+   printf("You entered symbole %c and ascii value is %d",ch,ch);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+   //To change uppercase characters into lowercase and viceversa
+   char str[100];
+   int i;
+   
+   printf("Enter the String: \n");
+   gets(str);
+   
+   for(i=0;str[i]!='\0';i++){
+       if(str[i]>=65 && str[i]<=90)
+            str[i]=str[i]+32;
+        else
+            str[i]=str[i]-32;
+   }
+   printf("After Change the String is %s",str);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+   //To Find the numbers of vowels
+   char str[100];
+   int i,vowels=0;
+   printf("Enter the String: \n");
+   scanf("%[^\n]s",&str);
+   for(i=0;str[i];i++){
+       if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'|str[i]=='O'||str[i]=='U')
+            vowels++;
+   }
+    printf("Totals vowels in the String are %d",vowels);
+    return 0;
+}
